@@ -1,0 +1,34 @@
+<application>
+  <component name="FileEditorProviderManager"><![CDATA[{}]]></component>
+  <component name="NotRoamableUiSettings">
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "GeneralSettings.initiallyConfigured": "true",
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.llm.installer.activate.toolwindow": "true",
+    "RunOnceActivity.webstorm.auto-popup.quick-doc.initialized": "true",
+    "experimental.ui.on.first.startup": "true",
+    "experimental.ui.used.version": "242.23339.15",
+    "fileTypeChangedCounter": "1",
+    "fontSizeToResetConsole": "13.0",
+    "fontSizeToResetEditor": "13.0",
+    "input.method.disabler.muted": "true",
+    "llm.installer.last.toolwindow.state": "LLM_INSTALLER",
+    "previousColorScheme": "_@user_Dark",
+    "registry.to.advanced.settings.migration.build": "WS-242.23339.15",
+    "ts.lib.d.ts.version": "5.4.3"
+  },
+  "keyToStringList": {
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.docker.dockerFile.DockerFileTypeDetector",
+      "com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+</application>
