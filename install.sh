@@ -31,14 +31,14 @@ if test ! -e /usr/bin/commitjb; then
     sudo ln -s "${current_dir}/commitjb" /usr/bin/
 fi
 
-workspace_xml="${GITPOD_REPO_ROOT}/.idea/workspace.xml"
-# if test -e "${workspace_xml}"; then
-  function watch_workspace_xml() {
-      tail -n 0 -F "${workspace_xml}" 2>/dev/null | while read -r line; do
-          commitjb
-          break;
-      done || true;
-      watch_workspace_xml;
-  }
-  watch_workspace_xml & disown
+# workspace_xml="${GITPOD_REPO_ROOT}/.idea/workspace.xml"
+# # if test -e "${workspace_xml}"; then
+#   function watch_workspace_xml() {
+#       tail -n 0 -F "${workspace_xml}" 2>/dev/null | while read -r line; do
+#           commitjb
+#           break;
+#       done || true;
+#       watch_workspace_xml;
+#   }
+#   watch_workspace_xml & disown
 # fi
