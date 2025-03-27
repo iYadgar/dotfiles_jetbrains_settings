@@ -6,11 +6,6 @@ omz plugin load z
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# Define/override variables
-ZSH_THEME=""
-CLICOLOR=1
-PROMPT='%F{white}[%n@%m %f%~%F{white}]%f$ '
-
 function test() {
     if [ $# -eq 2 ]; then
         z bob; npx nx test $1 --include $2 --watch
