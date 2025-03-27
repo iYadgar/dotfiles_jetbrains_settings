@@ -1,9 +1,6 @@
 
 # Load additional plugins
-omz plugin load history-substring-search
-
-# Disable default plugins
-omz plugin disable zsh-autosuggestions fzf
+omz plugin load z 
 
 # Substring search binding
 bindkey '^[[A' history-substring-search-up
@@ -13,3 +10,29 @@ bindkey '^[[B' history-substring-search-down
 ZSH_THEME=""
 CLICOLOR=1
 PROMPT='%F{white}[%n@%m %f%~%F{white}]%f$ '
+
+function test() {
+    if [ $# -eq 2 ]; then
+        z bob; npx nx test $1 --include $2 --watch
+    elif [ $# -eq 1 ]; then
+        z bob; npx nx test $1 --watch
+    else
+        echo "Usage: test <arg1> [arg2]"
+    fi
+}
+function start() {
+    if [ $# -eq 1 ]; then
+        z bob; npm run $1
+    else
+        z bob; npm run start
+    fi
+}
+alias edit="code ~/.zshrc"
+alias re="source ~/.zshrc"
+alias w="webstorm"
+alias open="z hibob; w ."
+alias --help=""
+alias --l=""
+alias --list=""
+alias cl="clear"
+alias gc="nx g c -c OnPush --standalone true --style scss"
