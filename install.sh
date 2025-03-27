@@ -1,4 +1,7 @@
-#!/usr/bin/env bash
+#! /usr/bin/zsh
+
+DOTFILES_DIR="${HOME}/.dotfiles"
+ZSH_CUSTOM_DIR="${HOME}/.oh-my-zsh/custom"
 set -eu
 
 function install_dotfiles() {
@@ -26,6 +29,7 @@ current_dir="$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)"
 
 install_dotfiles "${current_dir}/home_files" "${HOME}"
 install_dotfiles "${current_dir}/workspace_repo" "${GITPOD_REPO_ROOT}"
+ln -sf "${DOTFILES_DIR}/custom-zsh-config.zsh" "${ZSH_CUSTOM_DIR}/custom-zsh-config.zsh"
 
 if test ! -e /usr/bin/commitjb; then
     sudo ln -s "${current_dir}/commitjb" /usr/bin/
