@@ -1,0 +1,13 @@
+<templateSet group="Angular">
+  <template name="tap" value="tap(console.log)" description="tap(console.log)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="etap" value="$END$tap(( $VAR$ ) =&gt; {&#10;console.log('$VAR$: ')&#10;console.log($VAR$)&#10;    }&#10;)," description="explicit tap" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>

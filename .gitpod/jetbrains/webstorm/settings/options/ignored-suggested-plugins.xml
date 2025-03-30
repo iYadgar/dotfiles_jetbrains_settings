@@ -1,0 +1,13 @@
+<application>
+  <component name="IgnoredPluginSuggestions">
+    <option name="pluginIds">
+      <list>
+        <option value="org.intellij.plugins.postcss" />
+        <option value="aws.toolkit" />
+        <option value="io.raftt" />
+        <option value="com.intellij.aqua" />
+        <option value="dev.nx.console" />
+      </list>
+    </option>
+  </component>
+</application>

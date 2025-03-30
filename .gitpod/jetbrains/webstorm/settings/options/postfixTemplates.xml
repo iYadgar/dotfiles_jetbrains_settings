@@ -1,0 +1,49 @@
+<application>
+  <component name="PostfixTemplates">
+    <template id="ctt@userDefined" key=".ctt" provider="builtin.js" language-level="ES6" topmost="false">
+      <conditions />
+      <template name="fakeKey" value="console.time('$EXPR$')&#10;console.timeEnd('$EXPR$')" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="llg@userDefined" key=".llg" provider="builtin.js" language-level="ES6" topmost="false">
+      <conditions />
+      <template name="fakeKey" value="$EXPR$((x)=&gt;console.log(&quot;$EXPR$: &quot;+ x))" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="com.intellij.lang.javascript.template.postfix.JSLogPostfixTemplate#.log" key=".log" provider="builtin.js" builtin="com.intellij.lang.javascript.template.postfix.JSLogPostfixTemplate#.log" />
+    <template id="cll@userDefined" key=".cll" provider="builtin.js" language-level="ES6" topmost="false">
+      <conditions />
+      <template name="fakeKey" value="console.log('$EXPR$:', $EXPR$)" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="cl@userDefined" key=".cl" provider="builtin.js" language-level="ES6" topmost="false">
+      <conditions />
+      <template name="fakeKey" value="console.log('******** $EXPR$ ********')" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="ale@userDefined" key=".ale" provider="builtin.js" language-level="ES6" topmost="false">
+      <conditions />
+      <template name="fakeKey" value="window.alert($EXPR$)" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="cle@userDefined" key=".cle" provider="builtin.js" language-level="ES6" topmost="false">
+      <conditions />
+      <template name="fakeKey" value="console.error('Error:',$EXPR$)" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="cc@userDefined" key=".cc" provider="builtin.js" language-level="ES6" topmost="false">
+      <conditions />
+      <template name="fakeKey" value="console.count('$EXPR$');" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="clj@userDefined" key=".clj" provider="builtin.js" language-level="ES6" topmost="false">
+      <conditions />
+      <template name="fakeKey" value="console.log('$EXPR$:', JSON.stringify($EXPR$))" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="if@userDefined" key=".if" provider="builtin.js" language-level="ES6" topmost="false">
+      <conditions />
+      <template name="fakeKey" value="if ( $EXPR$ ){&#10;  $END$&#10;}&#10;" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="st@userDefined" key=".timeout" provider="builtin.js" language-level="ES6" topmost="false">
+      <conditions />
+      <template name="fakeKey" value="setTimeout(() =&gt; {&#10;    $EXPR$;&#10;},150)" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+    <template id="ct@userDefined" key=".time" provider="builtin.js" language-level="ES6" topmost="false">
+      <conditions />
+      <template name="fakeKey" value="console.time('$EXPR$')" description="" toReformat="true" toShortenFQNames="true" />
+    </template>
+  </component>
+</application>

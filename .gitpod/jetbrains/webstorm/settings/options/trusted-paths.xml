@@ -1,0 +1,21 @@
+<application>
+  <component name="Trusted.Paths">
+    <option name="TRUSTED_PROJECT_PATHS">
+      <map>
+        <entry key="$APPLICATION_CONFIG_DIR$/thinProject" value="true" />
+        <entry key="$APPLICATION_CONFIG_DIR$/thinProject1" value="true" />
+        <entry key="$APPLICATION_CONFIG_DIR$/thinProject2" value="true" />
+        <entry key="$USER_HOME$/WebstormProjects/untitled" value="true" />
+        <entry key="$USER_HOME$/workdir/dotfiles_jetbrains_settings" value="true" />
+        <entry key="$USER_HOME$/workdir/hibob-web-client" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="Trusted.Paths.Settings">
+    <option name="TRUSTED_PATHS">
+      <list>
+        <option value="$USER_HOME$/workdir" />
+      </list>
+    </option>
+  </component>
+</application>
