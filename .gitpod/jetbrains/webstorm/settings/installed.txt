@@ -1,3 +1,0 @@
-org.jetbrains.plugins.github
-com.github.copilot
-dev.nx.console

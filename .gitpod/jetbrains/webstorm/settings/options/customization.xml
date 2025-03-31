@@ -1,9 +1,0 @@
-<application>
-  <component name="com.intellij.ide.ui.customization.CustomActionsSchema">
-    <group value="Git.CompareWithBranch" is_action="true" action_type="1" position="11">
-      <path value="root" />
-      <path value="Main Toolbar" />
-    </group>
-    <action id="Git.CompareWithBranch" icon="$USER_HOME$/dev/webstorm-settings/git.png" />
-  </component>
-</application>

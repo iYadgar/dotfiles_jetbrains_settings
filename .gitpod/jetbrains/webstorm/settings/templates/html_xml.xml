@@ -1,9 +1,0 @@
-<templateSet group="html/xml">
-  <template name="CD" value="&lt;![CDATA[&#10;$SELECTION$&#10;]]&gt;" description="Surround with CDATA section" toReformat="false" toShortenFQNames="false" deactivated="true" />
-  <template name="cls" value="&lt;div class=&quot;$param1$&quot;&gt;&lt;/div&gt;" description="div class" toReformat="false" toShortenFQNames="true">
-    <variable name="param1" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="HTML" value="true" />
-    </context>
-  </template>
-</templateSet>

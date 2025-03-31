@@ -49,55 +49,5 @@ fi
 # WebStorm Settings Installation Section
 #########################################
 
-webstorm_zip="${current_dir}/WebStorm_Settings.zip"
-if [ -f "$webstorm_zip" ]; then
-  echo "📦 Installing WebStorm settings from $webstorm_zip"
-
-  # Detect OS and set JetBrains config dir
-  case "$(uname -s)" in
-    Darwin)
-      JETBRAINS_DIR="${HOME}/Library/Application Support/JetBrains"
-      ;;
-    Linux)
-      if grep -qi microsoft /proc/version; then
-        # WSL (Windows Subsystem for Linux)
-        JETBRAINS_DIR="${HOME}/AppData/Roaming/JetBrains"
-      else
-        JETBRAINS_DIR="${HOME}/.config/JetBrains"
-      fi
-      ;;
-    *)
-      echo "❌ Unsupported OS. Skipping WebStorm settings installation."
-      exit 1
-      ;;
-  esac
-
-  # Find the latest WebStorm config directory
-  WEBSTORM_DIR=$(find "$JETBRAINS_DIR" -type d -name "WebStorm*" 2>/dev/null | sort -r | head -n 1)
-
-  if [ -z "$WEBSTORM_DIR" ]; then
-    echo "❌ WebStorm config directory not found under $JETBRAINS_DIR. Skipping settings import."
-  else
-    echo "✅ Found WebStorm config directory at: $WEBSTORM_DIR"
-
-    # Backup current config
-    BACKUP_DIR="${WEBSTORM_DIR}-backup-$(date +%Y%m%d%H%M%S)"
-    echo "📁 Backing up existing settings to $BACKUP_DIR"
-    cp -R "$WEBSTORM_DIR" "$BACKUP_DIR"
-
-    # Unzip into temporary location
-    TEMP_DIR="/tmp/webstorm-settings"
-    echo "📂 Extracting settings to $TEMP_DIR"
-    rm -rf "$TEMP_DIR"
-    unzip -o "$webstorm_zip" -d "$TEMP_DIR"
-
-    # Copy to WebStorm config directory
-    echo "📥 Copying settings into $WEBSTORM_DIR"
-    cp -R "$TEMP_DIR"/* "$WEBSTORM_DIR"
-
-    echo "✅ WebStorm settings successfully installed."
-    rm -rf "$TEMP_DIR"
-  fi
-else
-  echo "⚠️ WebStorm_Settings.zip not found. Skipping WebStorm config install."
-fi
+mkdir -p /home/gitpod/.gitpod/jetbrains/webstorm/options
+unzip "$DOTFILES_DIR/webstorm/settings.zip" -d /home/gitpod/.gitpod/jetbrains/webstorm/options
