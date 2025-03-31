@@ -49,5 +49,5 @@ fi
 # WebStorm Settings Installation Section
 #########################################
 
-mkdir -p /home/gitpod/.gitpod/jetbrains/webstorm/options
-unzip "$DOTFILES_DIR/webstorm/settings.zip" -d /home/gitpod/.gitpod/jetbrains/webstorm/options
+mkdir -p $HOME/.gitpod/jetbrains/webstorm/options
+unzip "$DOTFILES_DIR/webstorm/settings.zip" -d $HOME/.gitpod/jetbrains/webstorm/options
