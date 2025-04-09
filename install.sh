@@ -29,6 +29,17 @@ install_dotfiles "${current_dir}/home_files" "${HOME}"
 install_dotfiles "${current_dir}/workspace_repo" "${GITPOD_REPO_ROOT}"
 ln -sf "${DOTFILES_DIR}/custom-zsh-config.zsh" "${ZSH_CUSTOM_DIR}/custom-zsh-config.zsh"
 
+if test -e "${current_dir}/ephemeral_jetbrains_config" && test -v JETBRAINS_BACKEND_QUALIFIER; then
+    (
+        shopt -s nullglob
+        until ides=(/workspace/.config/JetBrains/RemoteDev-*) && test -n "${ides:-}"; do
+            sleep 0.5
+        done
+
+        install_dotfiles "${current_dir}/ephemeral_jetbrains_config" "${ides[0]}"
+    ) & disown
+fi
+
 if test ! -e /usr/bin/commitjb; then
     sudo ln -s "${current_dir}/commitjb" /usr/bin/
 fi
